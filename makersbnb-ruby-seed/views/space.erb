@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section>
+    <h1>MakersBNB</h1>
+    <h2><%= @space.name %></h2>
+    <p>
+      <%= @space.description %>
+    </p>
+    <p>Price per night: £<%= @space.price_per_night %></p>
+    <br>
+      <p>Select dates</p>
+    
+      <form method="POST" action="/spaces/<%=@space.id %>/request">
+      <input type="date" name="book_from">
+      <input type="date" name="book_to">
+      <input type="submit" value="Request a booking">
+    </form>
+
+    <a href= "/spaces">Return to homepage</a>
+    <br>
+    <a href= "/logout">Log out</a> 
+  </section>
+  </body>
+</html>

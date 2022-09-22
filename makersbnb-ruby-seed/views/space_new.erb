@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section>
+    <h1> MakersBNB </h1>
+    <h2> List a new space </h2>
+    <form method="POST" action="/spaces">
+    <input type="text" name="name" placeholder="Name of space">
+      </div>
+      
+      <div>
+        <input type="text" name="description" placeholder="Description">
+      </div>
+
+      <div>
+        <input type="text" name="price_per_night" placeholder="Price per night (GBP)">
+      </div>
+      <br>
+      <div>
+        <p> Space unavailable from / to </p>
+        <input type="date" name="date_from">
+        <input type="date" name="date_to">
+      </div>
+      <br>
+      <input type="submit" value="Add space">
+      <br><br>
+        <div>
+          <a href='/spaces'>View spaces</a>
+        </div>
+    </form>
+  </section>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+  <head></head>
+  <body>
+    <h1> Spaces</h1>
+
+    <p>Date from: <%=@date_from%></p>
+    <p>Date to: <%=@date_to%></p>
+    <br />
+    <form method="POST" action="/spaces/filtered">
+      <input type="date" name="date_from">
+      <input type="date" name="date_to">
+      <input type="submit" value="Filter">
+    </form>
+    <form method="GET" action="/spaces">
+      <input type ="submit" value ="Clear"> 
+    </form>
+
+    <% @filtered.each do |space| %>
+      <div>Name: <%= space.name %></div>
+      <div>Description: <%= space.description %></div>
+      <div>Price per night: <%= space.price_per_night%></div>
+      <br />
+    <% end %>
+
+    <div>
+      <a href='/spaces/new'>List a new space.</a>
+    </div>
+
+    <div>
+      <a href='/'>Return to homepage.</a>
+    </div>
+
+  </body>
+</html>

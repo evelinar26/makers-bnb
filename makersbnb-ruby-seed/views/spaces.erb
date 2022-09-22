@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section>
+    <h1> Welcome to MakersBNB! </h1>
+    <h3><a class="profile_page" href ="/profile">Your profile page</a></h3>
+    <h2>Spaces</h2>
+    <form method="POST" action="/spaces/filtered">
+      <input type="date" name="date_from">
+      <input type="date" name="date_to">
+      <input type="submit" value="Filter"> 
+      </form>
+
+    <br>
+    <% @spaces.each do |space| %>
+    <div class="list_spaces">
+      <p>Name: <%= space.name %></p>
+      <p>Description: <%= space.description %></p>
+      <p>Price per night: £<%= space.price_per_night%></p>
+
+      <a href='/spaces/<%= space.id %>'>View space</a>
+    </div>
+    <% end %>
+  
+
+    <div>
+      <a class="profile_page" href='/spaces/new'>List a new space</a>
+    </div>
+
+    <a class="profile_page" href= "/logout">Log out</a>  
+  </section>
+  </body>
+</html>
