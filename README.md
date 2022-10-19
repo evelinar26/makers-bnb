@@ -4,13 +4,13 @@ A small Twitter clone that will allow the users to post messages to a public str
 Project in Ruby (using Sinatra and RSpec).
 
 
-## Setup
+# Setup
 
 # Install gems
-bundle install
+- bundle install
 
 # Run the tests
-rspec
+- rspec
 
 # Run the server (better to do this in a separate terminal).
-rackup
+- rackup
