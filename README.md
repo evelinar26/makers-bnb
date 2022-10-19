@@ -1,6 +1,6 @@
 ## MakersBnB Project Seed
 
-A small Twitter clone that will allow the users to post messages to a public stream.
+A small AirBNB clone that will allow the users to create an account, post properties and book one.
 Project in Ruby (using Sinatra and RSpec).
 
 
